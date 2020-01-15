@@ -1,0 +1,1 @@
+this folder is for golden deployment : prerequisites deployment before any automatized deployment.
