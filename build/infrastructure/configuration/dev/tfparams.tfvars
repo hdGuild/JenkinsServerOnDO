@@ -14,6 +14,7 @@ region = "FRA1"
 server_name = "hdGuild-jenkins"
 server_image = "ubuntu-18-04-x64"
 server_size = "2Gb"
+server_host_url = "jenkins.helldorado.fr"
 initial_server_setup_script = "..\\scripts\\initial_server_setup.sh"
 
 ## connection to use for provisioning

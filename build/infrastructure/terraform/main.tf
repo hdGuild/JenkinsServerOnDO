@@ -20,7 +20,7 @@ resource "digitalocean_droplet" "hdGuild-jenkins" {
           type = "ssh"
           private_key = file(var.fullpath_priv_key_file)
           timeout = "2m"
-          host    = digitalocean_droplet.hdGuild-jenkins.ipv4_address
+          host    = var.server_host_url
       }
 
     # initial setup for ubuntu install

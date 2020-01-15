@@ -12,5 +12,6 @@ variable "server_image" {}
 variable "server_name" {}
 variable "server_size" {}
 variable "initial_server_setup_script" {}
+variable "server_host_url" {}
 ## connection to use for provisioning
 variable "server_root_name" {}
