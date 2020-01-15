@@ -1,0 +1,21 @@
+# security inpût variables for terraform
+# personnal access token "HDGuild_Terraform2DigitalOcean" : value setted in keepass on dropbox
+
+# fullpath for pat and security files that stay on workstation 
+#fullpath_do_token_file = "C:/users/Philippe/.pat/hdguild2do.token"  # PAT replace passwords -> using ssh connection prevent the use of password
+fullpath_pub_key_file = "C:/users/Philippe/.ssh/id_rsa.pub"
+fullpath_priv_key_file = "C:/users/Philippe/.ssh/id_rsa.ppk"
+fullpath_ssh_fingerprint_file = "C:/users/Philippe/.ssh/id_rsa.fingerprint"
+
+# generic variables 
+region = "FRA1"
+
+# ubuntu 18.04 server
+server_name = "hdGuild-jenkins"
+server_image = "ubuntu-18-04-x64"
+server_size = "2Gb"
+server_host_url = "jenkins.helldorado.fr"
+initial_server_setup_script = "..\\scripts\\initial_server_setup.sh"
+
+## connection to use for provisioning
+server_root_name = "root"

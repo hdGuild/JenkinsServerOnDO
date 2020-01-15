@@ -11,7 +11,7 @@ resource "digitalocean_droplet" "hdGuild-jenkins" {
     size = var.server_size
     private_networking = true
     ssh_keys = [
-      file(var.fullpath_ssh_fingerprint_file)
+      file(var.fullpath_pub_key_file)
     ]
 
     # connection to use for provisionning
