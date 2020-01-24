@@ -11,7 +11,7 @@ resource "digitalocean_droplet" "hdGuild-jenkins" {
     size = var.server_size
     private_networking = true
     ssh_keys = [
-      file(var.fullpath_ssh_fingerprint_file)
+      file(var.fullpath_pub_key_file)
     ]
 
     # connection to use for provisionning
@@ -20,7 +20,7 @@ resource "digitalocean_droplet" "hdGuild-jenkins" {
           type = "ssh"
           private_key = file(var.fullpath_priv_key_file)
           timeout = "2m"
-          host    = digitalocean_droplet.hdGuild-jenkins.ipv4_address
+          host    = var.server_host_url
       }
 
     # initial setup for ubuntu install
