@@ -24,7 +24,9 @@ resource "digitalocean_droplet" "hdGuild-jenkins" {
       }
 
     # initial setup for ubuntu install
-
+    provisioner "remote-exec" {
+      script = var.initial_server_setup_script
+    }
     
     # install ngninx server
     provisioner "remote-exec" {
