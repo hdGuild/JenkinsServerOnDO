@@ -3,9 +3,9 @@
 
 # fullpath for pat and security files that stay on workstation 
 fullpath_do_token_file = "C:/users/pcarpentier/.pat/IngenicoWorkStation2DO.token" # PAT prevent the use of password -> used for provider.tf connection
-fullpath_pub_key_file = "C:/Users/pcarpentier/.ssh/id_rsa.pub"
-fullpath_priv_key_file = "C:/Users/pcarpentier/.ssh/id_rsa"
-fullpath_ssh_fingerprint_file = "C:/Users/pcarpentier/.ssh/id_rsa.fingerprint"
+fullpath_pub_key_file = "C:/Users/pcarpentier/.ssh/ingenico.pub"
+fullpath_priv_key_file = "C:/Users/pcarpentier/.ssh/ingenico.ppk"
+fullpath_ssh_fingerprint_file = "C:/Users/pcarpentier/.ssh/ingenico.fingerprint"
 
 # generic variables 
 region = "FRA1"
