@@ -2,9 +2,9 @@
 # personnal access token "HDGuild_Terraform2DigitalOcean" : value setted in keepass on dropbox
 
 # fullpath for pat and security files that stay on workstation 
-fullpath_do_token_file = "C:/users/Philippe/.pat/hdguild2do.token" # PAT prevent the use of password -> used for provider.tf connection
+fullpath_do_token_file = "C:/users/pcarpentier/.pat/IngenicoWorkStation2DO.token" # PAT prevent the use of password -> used for provider.tf connection
 fullpath_pub_key_file = "C:/Users/pcarpentier/.ssh/id_rsa.pub"
-fullpath_priv_key_file = "C:/Users/pcarpentier/.ssh/id_rsa.ppk"
+fullpath_priv_key_file = "C:/Users/pcarpentier/.ssh/id_rsa"
 fullpath_ssh_fingerprint_file = "C:/Users/pcarpentier/.ssh/id_rsa.fingerprint"
 
 # generic variables 
