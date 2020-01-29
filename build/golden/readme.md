@@ -2,6 +2,10 @@ this folder is for golden deployment : prerequisites deployment before any autom
 prequisites consist on : 
 - deploying droplet
 - deploying ubuntu server on the droplet with ssh access restriction
+    1. ssh configuration :
+        - putty uses .ppk private key that are not supported by openssh.
+        - git uses standard ssh private key, not .ppk format.
+        - needs to add in ~/.ssh/config file, the ssh IdentityFile as private key to test for ssh connection.
 - SSL certificate to ensure Vault's HTTP API
 - Key vault deployment where to keep secrets
 

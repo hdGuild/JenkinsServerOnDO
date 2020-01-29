@@ -13,12 +13,9 @@ USERNAME="Alaster"
 COPY_AUTHORIZED_KEYS_FROM_ROOT=true
 
 # Additional public keys to add to the new sudo user
-# OTHER_PUBLIC_KEYS_TO_ADD=(
-#     "ssh-rsa AAAAB..."
-#     "ssh-rsa AAAAB..."
-# )
-OTHER_PUBLIC_KEYS_TO_ADD=(
-)
+ OTHER_PUBLIC_KEYS_TO_ADD=(
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAkba1VpA7vC1Zpi+vjB+0metiibwfuUbQe4a7Wb5mfZ94pnO70kCPbGJq8rgkRk1Hh7POdMQi4VzLdzQC3aT2p78eJqAykgk8bGNaNYQq2PB74OBqAwsSPD6a2NROuuKsq8ry02OO/WYpVAIJ+K6U5hTcU+xlS4k13r2bAtE7/NuFs2QxIKEJH3h/0Z6wofbpG2OWMjzraMZkYrz642Djpx636KH/eXhcopnAs2uLCc8vYTELIXhSTl3ixHzlo4BJNkqu9o7ta12Wj9ovEcYCjxYCa5rcrqMEuVKj6iMZaJiWHvtOZotDbzSrgPuWMgCo11Fko9WQlF40aOstxxUp pcarpentier@usringenico@FRWS4035"
+ )
 
 ####################
 ### SCRIPT LOGIC ###
