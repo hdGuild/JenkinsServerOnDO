@@ -7,5 +7,6 @@ prequisites consist on :
         - git uses standard ssh private key, not .ppk format.
         - needs to add in ~/.ssh/config file, the ssh IdentityFile as private key to test for ssh connection.
 - SSL certificate to ensure Vault's HTTP API
+    1. using Let's Encrypt service
 - Key vault deployment where to keep secrets
 
