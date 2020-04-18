@@ -4,7 +4,7 @@
 # fullpath for pat and security files that stay on workstation 
 fullpath_do_token_file = "C:/users/Philippe/.pat/hdguild2do.token"  # PAT replace passwords -> used for provider.tf connection
 fullpath_pub_key_file  = "C:/users/Philippe/.ssh/id_rsa.pub"
-fullpath_priv_key_file = "C:/users/Philippe/.ssh/id_rsa"
+fullpath_priv_key_file = "C:/users/Philippe/.ssh/id_rsa.ppk"
 fullpath_ssh_fingerprint_file = "C:/users/Philippe/.ssh/id_rsa.fingerprint"
 
 # generic variables 
