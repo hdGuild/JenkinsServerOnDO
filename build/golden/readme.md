@@ -21,4 +21,3 @@ to run prequisite :
 - terraform plan -var-file= "..\configuration\<env>\<station>\tfparams.tfvars
 - terraform apply -var-file= "..\configuration\<env>\<station>\tfparams.tfvars
 
-This is a test
