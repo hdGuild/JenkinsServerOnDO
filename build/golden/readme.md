@@ -2,6 +2,7 @@ this folder is for golden deployment : prerequisites deployment before any autom
 prequisites consist on : 
 - deploying droplet
 - deploying ubuntu server on the droplet with ssh access restriction
+    0. manual installation at https://medium.com/@adrian.gheorghe.dev/how-to-use-terraform-and-ansible-to-raise-a-jenkins-server-on-digitalocean-15246b687666 
     1. ssh configuration :
         - putty uses .ppk private key that are not supported by openssh.
         - git uses standard ssh private key, not .ppk format.
