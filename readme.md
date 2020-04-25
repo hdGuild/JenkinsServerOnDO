@@ -3,7 +3,7 @@ This project is to automatize jenkins server deployment on a Digital Ocean dropl
     1. to use SSH key with GitHub it is needed the following :
         1. a SSH key pair RSA2 typed with 4096 bits without passphrase
         2. set the public key as SSH key for your githib account
-        3. set the private key as git ssh key on configuration .git file :
+        3. set the private key as git ssh key on .git/config file on project folder :
             [remote "origin"]
                 url = git@github.com:hdGuild/JenkinsServerOnDO.git
                 fetch = +refs/heads/*:refs/remotes/origin/*
