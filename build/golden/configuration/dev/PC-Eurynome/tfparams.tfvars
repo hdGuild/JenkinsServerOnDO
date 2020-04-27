@@ -1,6 +1,7 @@
 # security inpût variables for terraform
 # personnal access token "HDGuild_Terraform2DigitalOcean" : value setted in keepass on dropbox
 
+
 # fullpath for pat and security files that stay on workstation 
 fullpath_do_token_file = "C:/users/Philippe/.pat/hdguild2do.token"  # PAT replace passwords -> used for provider.tf connection
 fullpath_pub_key_file  = "C:/users/Philippe/.ssh/DO_id_rsa.pub"
@@ -9,8 +10,9 @@ fullpath_ssh_fingerprint_file = "C:/users/Philippe/.ssh/DO_id_rsa.fingerprint"
 
 # generic variables 
 region = "FRA1"
+environment = "development"
 
-# ubuntu 18.04 server
+# vm to deploy : ubuntu 18.04 server
 server_name = "hdGuild-jenkins"
 server_image = "ubuntu-18-04-x64"
 server_size = "2Gb"

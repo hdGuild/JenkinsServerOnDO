@@ -2,8 +2,21 @@
 # security inpût variables for terraform
 # personnal access token "HDGuild_Terraform2DigitalOcean" : value setted in keepass on dropbox
 
+
+# Local section to import tags on all resources
+locals {
+  common_tags = {
+    "GitHub project"      = "jenkinsServerOnDO"
+    Provider              = "digitalocean"
+    Deployment            = "terraform"
+    Environment           = var.environment
+  }
+}
+
 # creates the droplet on Digital Ocean 
 resource "digitalocean_droplet" "hdGuild-jenkins" {
+    # generic data
+    tags = "${merge(local.common_tags)}"
     # vm to deploy
     image = var.server_image
     name = var.server_name
