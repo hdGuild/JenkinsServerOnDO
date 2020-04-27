@@ -9,6 +9,7 @@ prequisites consist on :
 - deploying droplet
 - deploying ubuntu server on the droplet with ssh access restriction
     0. manual installation at https://medium.com/@adrian.gheorghe.dev/how-to-use-terraform-and-ansible-to-raise-a-jenkins-server-on-digitalocean-15246b687666 
+    1. Install Ansible on Windows 10 at : https://www.youtube.com/watch?v=4sMFybv74Uo
 - SSL certificate to ensure Vault's HTTP API
     1. using Let's Encrypt service
 - Key vault deployment where to keep secrets

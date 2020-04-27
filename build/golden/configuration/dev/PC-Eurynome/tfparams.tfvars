@@ -21,3 +21,6 @@ initial_server_setup_script = "..\\scripts\\initial_server_setup.sh"
 
 ## connection to use for provisioning
 server_root_name = "root"
+jenkinsDomainName = "jenkins.helldorado.fr"
+jenkinsServerName = "jenkins"
+jenkinsFirewallName = "firewall-jenkins"

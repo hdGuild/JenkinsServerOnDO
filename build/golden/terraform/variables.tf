@@ -6,6 +6,7 @@ variable "fullpath_ssh_fingerprint_file" {}
 
 # generic variables
 variable "region" {}
+variable "environment" {}
 
 # variable for jenkins server install
 variable "server_image" {}
@@ -15,3 +16,6 @@ variable "initial_server_setup_script" {}
 #variable "server_host_url" {}
 ## connection to use for provisioning
 variable "server_root_name" {}
+variable "jenkinsDomainName" {}
+variable "jenkinsServerName" {}
+variable "jenkinsFirewallName" {}
