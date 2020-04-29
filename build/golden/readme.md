@@ -4,8 +4,16 @@ prequisites consist on :
     1. ssh configuration :
         - putty uses .ppk private key that are not supported by openssh.
         - git uses standard openssh private key, not .ppk format. 
+            - to see openssh format of putygen ssh key, do load the .ppk with puttygen (see : https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/)
         - needs to add in ~/.ssh/config file, the git ssh IdentityFile as private key to test for ssh connection.
         - windows openssh does not support ssh agent, so do not use passphrase on windows openssh private keys to use with github !
+        - DigitalOcean does use Key ID rather than Key itself :
+        hi, instead of the actual key you have to send the ID of the key.
+
+        1. generate the key (which it looks like you’ve already done)
+        2. add your public key via https://cloud.digitalocean.com/ssh_keys or API https://developers.digitalocean.com/documentation/v2/#create-a-new-key
+        3. get the ID of the added public key via API call curl -X GET -H ‘Content-Type: application/json’ -H 'Authorization: Bearer 40e0f142bf2fcdeeaec672a92ca307b0c9de838a4faac51585df26c56eab2541’ “https://api.digitalocean.com/v2/account/keys”
+        4. use this ID for you droplet creation call: …,“ssh_keys”:[123456]… enjoy!
 - deploying droplet
 - deploying ubuntu server on the droplet with ssh access restriction
     0. manual installation at https://medium.com/@adrian.gheorghe.dev/how-to-use-terraform-and-ansible-to-raise-a-jenkins-server-on-digitalocean-15246b687666 

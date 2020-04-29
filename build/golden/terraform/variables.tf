@@ -7,6 +7,8 @@ variable "fullpath_ssh_fingerprint_file" {}
 # generic variables
 variable "region" {}
 variable "environment" {}
+variable "connectionType" {}
+variable "ssh_key_id" {}
 
 # variable for jenkins server install
 variable "server_image" {}
