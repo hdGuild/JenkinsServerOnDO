@@ -51,6 +51,7 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
         host = self.ipv4_address
     }
     # initial setup for ubuntu install
+    # Do not forgat to add the key to ssh agent before this step !!
     provisioner "remote-exec" {
         script = var.initial_server_setup_script
     }

@@ -13,6 +13,7 @@ USERNAME="Alaster"
 COPY_AUTHORIZED_KEYS_FROM_ROOT=true
 
 # Additional public keys to add to the new sudo user
+# public keys is the one from Digital Ocean referenced by id as this is a new sudo user with same ssh kay
  OTHER_PUBLIC_KEYS_TO_ADD=(
     "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDqECwxsaypzywT7B2vcCSlLsmL8Qkxq+ZkyrzTe3VolT8W2Tj57UDRscL1+1ftQVoGjrQU8ZQsopD7NBDlw4rCrjJ3A+yLV59u634bDCNAGIdSrO8xd5JD8UNq8W3bIXJQi4sXaUt++zqPNiP7pqdtI5q28ISOkv3PD5T3KL22jlgECHw1rDBguLlHTU2ST0sqUAydHwjhNnP9EVEWigdW7HSb7OWIXSP85lB6srl7344+Yfzh9xbE81i9jHCHrIuEi53SSVpQBxz4VEacU5b6wo5ZMRHhhVQDwTTvLHyjTNcB34DuPs73Qnj2++fv/LTSfqaTNdy+a/D8V/VPCpnM5p/a49AUeEorlcWf8Vak8+osnh3S0uw/wThCrxfshkEmznknDBE7cx4QDS20JRZZ+GplFCjnNKzPNLbnQnczcoUolDyJEER53lj9PlR1fxwTp0LpEuXy85ereeqen3zvAwcbdG5FQLj2nXibCC8/eNE85AD6zNVQ09fXILRZvKs= Philippe@PC-Eurynome"
  )
