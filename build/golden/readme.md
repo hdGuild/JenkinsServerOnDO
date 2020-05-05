@@ -33,3 +33,12 @@ to run prequisite :
 - terraform plan -var-file= "..\configuration\<env>\<station>\tfparams.tfvars
 - terraform apply -var-file= "..\configuration\<env>\<station>\tfparams.tfvars
 
+1. Storyline :
+    1. DONE : Deploy Ubuntu server using terraform with initial setup by script 
+    2. DONE : Change to deploy CentOS server using terraform
+    3. create bash script for initial CentOS server setup
+    4. organize Terraform code using modules
+        1. Deploy and use KeyVault values in server setup and terraform scripts
+    5. Deploy Jenkins server in CentOS
+    6. configure jenkins server on CentOS for use
+    7. FOR UPDATE : Use Ansible to do the above scripting configuration
