@@ -16,11 +16,11 @@ ssh_key_id = "27305903" #PC_Eurynome_id_rsa on Digital Ocean
 
 # vm to deploy : ubuntu 18.04 server
 server_name = "hdGuild-jenkins"
-server_image = "ubuntu-18-04-x64"
-initial_server_setup_script = "..\\scripts\\initial_ubuntu_server_setup.sh"
+# server_image = "ubuntu-18-04-x64" #slug
+# initial_server_setup_script = "..\\scripts\\initial_ubuntu_server_setup.sh"
 # vm to deploy : centos-8-x64 server
-#server_image = "centos-8-x64"
-#initial_server_setup_script = "..\\scripts\\initial_ubuntu_server_setup.sh"
+server_image = "centos-7-x64" #slug
+initial_server_setup_script = "..\\scripts\\initial_centos_server_setup.sh"
 
 server_size = "2Gb"
 #server_host_url = "jenkins.helldorado.fr"
