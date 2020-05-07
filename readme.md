@@ -1,4 +1,5 @@
 This project is to automatize jenkins server deployment on a Digital Ocean droplet using Terraform.
+
 1. Github configuration
     1. to use SSH key with GitHub it is needed the following :
         1. a SSH key pair RSA2 typed with 4096 bits without passphrase
