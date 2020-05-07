@@ -1,5 +1,6 @@
 this folder is for golden deployment : prerequisites deployment before any automatized deployment.
-prequisites consist on : 
+prequisites consist on :
+
 - code prepare :
     1. ssh configuration :
         - putty uses .ppk private key that are not supported by openssh.
