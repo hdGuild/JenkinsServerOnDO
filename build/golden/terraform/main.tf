@@ -27,7 +27,7 @@ locals {
 # creates the droplet on Digital Ocean 
 resource "digitalocean_droplet" "hdGuild_jenkins" {
     # generic data
-    #tags = local.common_tags
+    tags = local.common_tags
     # vm to deploy
     image = var.server_image
     name = var.server_name
@@ -55,57 +55,5 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
     provisioner "remote-exec" {
         script = var.initial_server_setup_script
     }
-    
-    # # install ngninx server
-    # provisioner "remote-exec" {
-    #   inline = [
-    #     "export PATH=$PATH=/usr/bin",
-    #     # install nginx
-    #     "sudo apt-get update",
-    #     "sudo apt-get -y install nginx"
-    #   ]
-    # }
-}
-
-## no more domain actually.
-# resource "digitalocean_domain" "jenkinsSrv" {
-#     name = var.jenkinsDomainName
-# }
-
-# resource "digitalocean_record" "jenkinsSrv" {
-#     name = var.jenkinsServerName
-#     type = "A"
-#     domain = digitalocean_domain.jenkinsSrv.name
-#     value = digitalocean_droplet.hdGuild_jenkins.ipv4_address
-# }
-
-# #Firewall rules blocs ssh access
-# resource "digitalocean_firewall" "jenkins" {
-#     name = var.jenkinsFirewallName
-#     droplet_ids = [digitalocean_droplet.hdGuild_jenkins.id]
-
-#     inbound_rule {
-#             protocol = "tcp"
-#             port_range = "22"
-#             source_addresses  = ["all"]
-#         }
-
-#     inbound_rule {
-#             protocol = "tcp"
-#             port_range = "80"
-#             source_addresses  = ["all"]
-#         }
-
-#     inbound_rule {
-#             protocol = "tcp"
-#             port_range = "443"
-#             source_addresses  = ["all"]
-#         }
-
-#     inbound_rule {
-#             protocol = "tcp"
-#             port_range = "8080"
-#         }
-
-# }
+}    
 
