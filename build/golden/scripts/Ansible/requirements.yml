@@ -1,0 +1,10 @@
+---
+- src: geerlingguy.git
+- src: geerlingguy.java
+- src: geerlingguy.jenkins
+- src: hispanico.nginx-revproxy
+- src: hispanico.letsencrypt-nginx-revproxy
+- src: geerlingguy.mysql
+- src: geerlingguy.docker
+- src: geerlingguy.ansible
+- src: geerlingguy.pip

@@ -1,0 +1,52 @@
+---
+- hosts: hdGuild-jenkins
+  become: true
+  any_errors_fatal: true
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo apt-get -y install python
+    - name: Set the java_packages variable (Ubuntu).
+      set_fact:
+        java_packages:
+          - openjdk-8-jdk
+    - name: update cache
+      apt:
+        update_cache: true
+    - name: Install apache2-utils
+      apt:
+        name: apache2-utils
+        state: present
+
+- hosts: hdGuild-jenkins
+  become: true
+  any_errors_fatal: true
+  gather_facts: yes
+  vars:
+    jenkins_hostname: jenkins.helldorado.fr
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins
+      become: yes
+      vars:
+        jenkins_admin_username: admin
+        jenkins_admin_password: admin
+        jenkins_package_state: present
+    - role: hispanico.nginx-revproxy
+    - role: hispanico.letsencrypt-nginx-revproxy
+      vars:
+        nginx_revproxy_sites:
+          jenkins.example.org:
+            domains:
+              - jenkins.helldorado.fr
+            upstreams:
+              - { backend_address: 127.0.0.1, backend_port: 8080 }
+            letsencrypt: true
+            letsencrypt_email: 'contact.laguilde@helldorado.fr'
+            ssl: true
+    - role: geerlingguy.pip
+      vars:
+        ansible_install_method: pip
+        ansible_install_version_pip: "2.7.0"
+    - role: geerlingguy.ansible
+    - role: geerlingguy.docker
