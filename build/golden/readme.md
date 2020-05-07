@@ -36,7 +36,7 @@ to run prequisite :
 1. Storyline :
     1. DONE : Deploy Ubuntu server using terraform with initial setup by script 
     2. DONE : Change to deploy CentOS server using terraform
-    3. create bash script for initial CentOS server setup
+    3. DONE : create bash script for initial CentOS server setup
     4. organize Terraform code using modules
         1. Deploy and use KeyVault values in server setup and terraform scripts
     5. Deploy Jenkins server in CentOS

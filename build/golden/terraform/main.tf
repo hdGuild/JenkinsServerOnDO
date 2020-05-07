@@ -27,7 +27,7 @@ locals {
 # creates the droplet on Digital Ocean 
 resource "digitalocean_droplet" "hdGuild_jenkins" {
     # generic data
-    tags = local.common_tags
+    #tags = local.common_tags
     # vm to deploy
     image = var.server_image
     name = var.server_name
@@ -50,10 +50,10 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
         timeout = "2m"
         host = self.ipv4_address
     }
-    # initial setup for ubuntu install
-    # Do not forgat to add the key to ssh agent before this step !!
+    # initial setup for server install
+    # Do not forgot to add the key to ssh agent before this step !!
     provisioner "remote-exec" {
         script = var.initial_server_setup_script
     }
-}    
+    
 
