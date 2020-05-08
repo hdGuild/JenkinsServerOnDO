@@ -4,6 +4,11 @@
 # using https://www.digitalocean.com/community/tutorials/how-to-set-up-jenkins-for-continuous-development-integration-on-centos-7
 
 set -euo pipefail
-# this script will use a sudo user, not the root one
+
+# we will install Jenkins using WAR file running as instaled under centos 7
 
 # Step 1 — Installing Jenkins
+## install java
+yum -y install java
+
+## install jenkins from WAR file
