@@ -84,8 +84,11 @@ sed --in-place 's/^PermitRootLogin.*/PermitRootLogin prohibit-password/g' /etc/s
 if sshd -t -q; then
     systemctl restart sshd
 fi
+
 # disallow remote root login
-sed -i 's/#PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+# this will be done after server configuration
+sed --in-place 's/#PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+
 # the reload ssh daemon
 systemctl reload sshd
 

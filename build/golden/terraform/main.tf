@@ -56,4 +56,4 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
         script = var.initial_server_setup_script
     }
     
-
+}
