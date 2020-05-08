@@ -23,6 +23,7 @@ server_name = "hdGuild-jenkins"
 server_image = "centos-7-x64" #slug
 initial_server_setup_script = "..\\scripts\\initial_centos_server_setup.sh"
 
+# server_size = "2Gb"
 server_size = "s-1vcpu-1gb" # minimal configuration - enought for tests
 #server_host_url = "jenkins.helldorado.fr"
 
