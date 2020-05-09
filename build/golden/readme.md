@@ -50,6 +50,6 @@ prequisites consist on :
     3. DONE : create bash script for initial CentOS server setup
     4. organize Terraform code using modules
         1. Deploy and use KeyVault values in server setup and terraform scripts
-    5. Deploy Jenkins server in CentOS
+    5. DONE : Deploy Jenkins server in CentOS
     6. configure jenkins server on CentOS for use
     7. FOR UPDATE : Use Ansible to do the above scripting configuration
