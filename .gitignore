@@ -3,7 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=terraform
 
 ### Terraform ###
-# Local .terraform directories
+# all .terraform directories
 **/.terraform/*
 
 # .tfstate files

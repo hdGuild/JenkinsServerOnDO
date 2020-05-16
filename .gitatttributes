@@ -8,6 +8,7 @@
 *.tf text
 *.tfvars text
 *.gitattributes text
+*.gitignore text
 
 # Declare files that will always have LF line endings on checkout.
 *.sh eol=lf
