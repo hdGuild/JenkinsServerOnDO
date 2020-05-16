@@ -54,7 +54,8 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
     # Do not forgot to add the key to ssh agent before this step !!
     provisioner "remote-exec" {
         scripts = [var.initial_server_setup_script,
-                   var.jenkins_server_install_script]
+                   var.jenkins_install_script,
+                   var.jenkins_init_script]
     }
     
 }

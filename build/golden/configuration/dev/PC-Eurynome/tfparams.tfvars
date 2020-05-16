@@ -7,6 +7,7 @@ fullpath_do_token_file = "C:\\users\\Philippe\\.pat\\hdguild2do.token"  # PAT re
 fullpath_pub_key_file  = "C:\\users\\Philippe\\.ssh\\id_rsa"
 fullpath_priv_key_file = "C:\\Users\\Philippe\\.ssh\\id_rsa.ppk"
 fullpath_ssh_fingerprint_file = "C:\\users\\Philippe\\.ssh\\id_rsa.fingerprint"
+fullpath_do_secret_file = "C:\\users\\Philippe\\.sak\\HDGuild_tfstate.secret"
 
 # generic variables 
 region = "FRA1"
@@ -23,7 +24,9 @@ server_name = "hdGuild-jenkins"
 # vm to deploy : centos-7-x64 server
 server_image = "centos-7-x64" #slug
 initial_server_setup_script = "..\\scripts\\initial_centos_server_setup.sh"
-jenkins_server_install_script = "..\\scripts\\JenkinsInstallOnCentOs.sh"
+jenkins_install_script = "..\\scripts\\JenkinsInstallOnCentOs.sh"
+jenkins_init_script = "..\\scripts\\Jenkins_initial_config.sh"
+
 # server_size = "2Gb"
 server_size = "s-1vcpu-1gb" # minimal configuration - enought for tests
 #server_host_url = "jenkins.helldorado.fr"

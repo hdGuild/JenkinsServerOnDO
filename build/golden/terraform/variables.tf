@@ -3,6 +3,7 @@ variable "fullpath_do_token_file" {}
 variable "fullpath_pub_key_file" {}
 variable "fullpath_priv_key_file" {}
 variable "fullpath_ssh_fingerprint_file" {}
+variable "fullpath_do_secret_file" {}
 
 # generic variables
 variable "region" {}
@@ -15,7 +16,8 @@ variable "server_image" {}
 variable "server_name" {}
 variable "server_size" {}
 variable "initial_server_setup_script" {}
-variable "jenkins_server_install_script" {}
+variable "jenkins_install_script" {}
+variable "jenkins_init_script" {}
 
 #variable "server_host_url" {}
 ## connection to use for provisioning
