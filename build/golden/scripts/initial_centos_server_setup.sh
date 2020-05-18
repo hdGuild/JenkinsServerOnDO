@@ -87,11 +87,7 @@ fi
 
 # disallow remote root login
 # this will be done after server configuration
-<<<<<<< Updated upstream
 sed --in-place 's/#PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
-=======
-#sed --in-place 's/#PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
->>>>>>> Stashed changes
 
 # the reload ssh daemon
 systemctl reload sshd
