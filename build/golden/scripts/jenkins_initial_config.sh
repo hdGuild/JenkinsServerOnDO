@@ -4,6 +4,8 @@
 # see https://riptutorial.com/jenkins/example/24925/disable-setup-wizard
 # run this script as root 
 
+echo 'script jenkins_initial_config.sh running'
+
 # removing "unlockJenkins Start screen" - using groovy script 
 # rem : unlock code at : /root/.jenkins/secrets/initialAdminPassword
 ## create groovy script
@@ -47,5 +49,6 @@ mkdir --parents /root/.jenkins/init.groovy.d ; mv basic-security.groovy $_
 systemctl restart jenkins.service
 rm -f /root/.jenkins/init.groovy.d/basic-security.groovy
 
-# using jenkins with commanbd line : 
-## java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ <commands>
+echo 'using jenkins CLI from commanbd line : ' 
+echo '1. wget localhost:8080/jnlpJars/jenkins-cli.jar'
+echo '2. java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ help'

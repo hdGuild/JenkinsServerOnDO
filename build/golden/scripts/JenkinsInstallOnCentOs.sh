@@ -6,6 +6,7 @@
 set -euo pipefail
 
 # we will install Jenkins using WAR file running as instaled under centos 7
+echo 'script jenkinsInstallOnCentOS.sh running'
 
 # Step 1 — Installing Jenkins
 ## install java
