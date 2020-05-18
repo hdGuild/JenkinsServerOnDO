@@ -5,6 +5,8 @@
 # based on https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-centos-7-servers
 set -euo pipefail
 
+echo 'script initial_centos_server_setup.sh running'
+
 ########################
 ### SCRIPT VARIABLES ###
 ########################
