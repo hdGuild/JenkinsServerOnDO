@@ -64,9 +64,9 @@ prequisites consist on :
     5. DONE : Deploy Jenkins server in CentOS
     6. configure jenkins server on CentOS for use
     7. FOR UPDATE : Use Ansible to do the above scripting configuration
-    8. DONE : Deploy Ansibmle on Jenkins server
+    8. DONE : Deploy Ansible on Jenkins server
     9. Deploy Hashicorp Vault on jenkins' CentOs server
         see : https://phoenixnap.com/kb/how-to-install-vault-on-centos-7#htoc-initialize-and-unseal-vault
     10. Use the vault for Secrets deployment as jenkins user name and password
     11. use jenkins pipeline to deploy Ubuntu server using terraform for HDWebSite
-    12. use jenkins pipeline to set up^a LEMP on Ubuntu server using Ansible (see : https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-lemp-on-ubuntu-18-04)
+    12. use jenkins pipeline to set up a LEMP on Ubuntu server using Ansible (see : https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-lemp-on-ubuntu-18-04)
