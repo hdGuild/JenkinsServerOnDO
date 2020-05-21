@@ -51,4 +51,4 @@ rm -f /root/.jenkins/init.groovy.d/basic-security.groovy
 
 echo 'using jenkins CLI from commanbd line : ' 
 echo '1. wget localhost:8080/jnlpJars/jenkins-cli.jar'
-echo '2. java -jar jenkins-cli.jar -s http://127.0.0.1:8080/ help'
+echo '2. java -jar jenkins-cli.jar -auth admin_name:admin_password -s http://127.0.0.1:8080/ help'

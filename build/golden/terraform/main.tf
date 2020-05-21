@@ -55,7 +55,8 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
     provisioner "remote-exec" {
         scripts = [var.initial_server_setup_script,
                    var.jenkins_install_script,
-                   var.jenkins_init_script]
+                   var.jenkins_init_script,
+                   var.ansible_install_script]
     }
     
 }

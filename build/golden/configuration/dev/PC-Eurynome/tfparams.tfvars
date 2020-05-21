@@ -26,6 +26,7 @@ server_image = "centos-7-x64" #slug
 initial_server_setup_script = "..\\scripts\\initial_centos_server_setup.sh"
 jenkins_install_script = "..\\scripts\\JenkinsInstallOnCentOs.sh"
 jenkins_init_script = "..\\scripts\\Jenkins_initial_config.sh"
+ansible_install_script = "..\\scripts\\ansibleInstallOnCentOS.sh"
 
 # server_size = "2Gb"
 server_size = "s-1vcpu-1gb" # minimal configuration - enought for tests

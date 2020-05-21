@@ -18,6 +18,7 @@ variable "server_size" {}
 variable "initial_server_setup_script" {}
 variable "jenkins_install_script" {}
 variable "jenkins_init_script" {}
+variable "ansible_install_script" {}
 
 #variable "server_host_url" {}
 ## connection to use for provisioning
