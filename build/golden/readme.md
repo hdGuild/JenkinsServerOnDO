@@ -21,11 +21,17 @@ prequisites consist on :
 
 ## deploying droplet
 
-### deploying ubuntu server on the droplet with ssh access restriction
+### deploying centOS server on the droplet with ssh access restriction
 
-    0. manual installation at <https://medium.com/@adrian.gheorghe.dev/how-to-use-terraform-and-ansible-to-raise-a-jenkins-server-on-digitalocean-15246b687666>
+    0. Deploy CentOs7 server on DigitalOcean using terraform. (see: https://www.digitalocean.com/community/tutorials/how-to-use-terraform-with-digitalocean)
 
-    1. Install Ansible on Windows 10 at : <https://www.youtube.com/watch?v=4sMFybv74Uo>
+    1. scripting CentOS7 initial server setup (see: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7)
+
+    2. jenkins install on CentOS 7 server (see: https://www.digitalocean.com/community/tutorials/how-to-set-up-jenkins-for-continuous-development-integration-on-centos-7)
+
+    3. scripting Jenkins initial setup (see differents web pages on jenkins initial setup)
+
+    4. Install Ansible on CentOS 7 server (see : https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-centos-7)
 
 ### SSL certificate to ensure Vault's HTTP API
 
@@ -43,6 +49,11 @@ prequisites consist on :
 - terraform plan -var-file= "..\configuration\<env>\<station>\tfparams.tfvars
 - terraform apply -var-file= "..\configuration\<env>\<station>\tfparams.tfvars
 
+## using jenkins CLI from commanbd line
+
+1. wget localhost:8080/jnlpJars/jenkins-cli.jar
+2. java -jar jenkins-cli.jar -auth admin_name:admin_password -s <http://127.0.0.1:8080/> help
+
 ## Storyline
 
     1. DONE : Deploy Ubuntu server using terraform with initial setup by script 
@@ -56,5 +67,6 @@ prequisites consist on :
     8. DONE : Deploy Ansibmle on Jenkins server
     9. Deploy Hashicorp Vault on jenkins' CentOs server
         see : https://phoenixnap.com/kb/how-to-install-vault-on-centos-7#htoc-initialize-and-unseal-vault
-    10. Use the vault for Secrets deployment as jenkins user name and password.
-
+    10. Use the vault for Secrets deployment as jenkins user name and password
+    11. use jenkins pipeline to deploy Ubuntu server using terraform for HDWebSite
+    12. use jenkins pipeline to set up^a LEMP on Ubuntu server using Ansible (see : https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-lemp-on-ubuntu-18-04)
