@@ -53,3 +53,8 @@ prequisites consist on :
     5. DONE : Deploy Jenkins server in CentOS
     6. configure jenkins server on CentOS for use
     7. FOR UPDATE : Use Ansible to do the above scripting configuration
+    8. DONE : Deploy Ansibmle on Jenkins server
+    9. Deploy Hashicorp Vault on jenkins' CentOs server
+        see : https://phoenixnap.com/kb/how-to-install-vault-on-centos-7#htoc-initialize-and-unseal-vault
+    10. Use the vault for Secrets deployment as jenkins user name and password.
+
