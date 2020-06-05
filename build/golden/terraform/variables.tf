@@ -26,3 +26,6 @@ variable "server_root_name" {}
 variable "jenkinsDomainName" {}
 variable "jenkinsServerName" {}
 variable "jenkinsFirewallName" {}
+
+# server variables
+variable "floating_ip" {}

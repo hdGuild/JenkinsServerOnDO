@@ -31,6 +31,7 @@ ansible_install_script = "..\\scripts\\ansibleInstallOnCentOS.sh"
 # server_size = "2Gb"
 server_size = "s-1vcpu-1gb" # minimal configuration - enought for tests
 #server_host_url = "jenkins.helldorado.fr"
+floating_ip = "64.225.93.33" # digitalocean floating ip for the droplet
 
 ## connection to use for provisioning
 server_root_name = "root"
