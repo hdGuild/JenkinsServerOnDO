@@ -28,4 +28,5 @@ variable "jenkinsServerName" {}
 variable "jenkinsFirewallName" {}
 
 # server variables
-variable "floating_ip" {}
+## removing floating ip use as costing
+## variable "floating_ip" {}

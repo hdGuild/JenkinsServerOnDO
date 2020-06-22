@@ -61,7 +61,9 @@ resource "digitalocean_droplet" "hdGuild_jenkins" {
     
 }
 
-resource "digitalocean_floating_ip_assignment" "jenkins_floatingip_assign" {
-  ip_address = var.floating_ip
-  droplet_id = digitalocean_droplet.hdGuild_jenkins.id
-}
+## removing floating ip use as costing
+##
+# resource "digitalocean_floating_ip_assignment" "jenkins_floatingip_assign" {
+#   ip_address = var.floating_ip
+#   droplet_id = digitalocean_droplet.hdGuild_jenkins.id
+# }
