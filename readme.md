@@ -1,20 +1,37 @@
-This project is to automatize jenkins server deployment on a Digital Ocean droplet using Terraform.
+# Master deploy server
+*This server will get the necessary tools to automate deployment on HDGuilds projects.*
 
-1. Github configuration
-    1. to use SSH key with GitHub it is needed the following :
-        1. a SSH key pair RSA2 typed with 4096 bits without passphrase
-        2. set the public key as SSH key for your githib account
-        3. set the private key as git ssh key on .git/config file on project folder :
-            [remote "origin"]
-                url = git@github.com:hdGuild/JenkinsServerOnDO.git
-                fetch = +refs/heads/*:refs/remotes/origin/*
-                identityfile= C:\\Users\\Philippe/.ssh/git_id_rsa
+*The needed tools are listed bellow*
+* Terraform (Cloud infrastructure deployment)
+* Jenkins (CI/CD deployments)
+* Ansible (configuration management)
+* Hashicorp Vault (security)
+* liquibase (Database update management)
+* WP-Cli (Wordpress client)
 
-2. Repository structure
-    1. Build folder contains the sources to build for release
-        1. Application folder gets the application source code. 
-            Each application should have its own folder
-        2. infrastructure folder contains the source for infrastructure deployment
-            contains configuration per environment, scripts for deployment or to deploy, terraform source code
-    2. golden folder contains prerequisite deployment before automated deplyment can process
-    3. deploy folder contains the pipelines to automate deployments
+
+**Resume :** This project is to automatize the *Master server* deployment. This server will contains all needed resources and tools that will be used for, mainly, the helldorado.fr website.
+
+********
+
+## 1. Github configuration to use with ssh
+Using Github with ssh key (needed to automate deployments) needs the following :
+1. SSH key pair RSA2 typed with 4096 bits without passphrase
+2. set the public key as SSH key for your githib account
+3. set the private key (git_id_rsa) as git ssh key on the .git/config file on project folder :
+
+       [remote "origin"]
+        url = git@github.com:hdGuild/JenkinsServerOnDO.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+        identityfile= C:\\Users\\Philippe/.ssh/git_id_rsa
+
+
+## 2. Repository structure
+The project is structured as bellow :
+* Build folder contains the sources to build for release.
+    * Application folder gets the application source code.
+        *Each application should have its own folder*
+    * infrastructure folder contains the source for infrastructure deployment
+        *contains configuration per environment, scripts for deployment or to deploy, terraform source code*
+* golden folder contains prerequisite deployment before automated deplyment can process
+* deploy folder contains the pipelines to automate deployments.
