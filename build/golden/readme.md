@@ -24,26 +24,26 @@ The ssh connection is made following these steps :
     - as windows openssh does not support ssh agent, do not use passphrase on private keys to use with github !
     - DigitalOcean does use Key ID rather than Key itself :
 
-        *hi, instead of the actual key you have to send the ID of the key.*
+        1. generate the key (for digitalOcean)
+        2. add your public key via [digitalocean ssh key pâge](https://cloud.digitalocean.com/ssh_keys) or [API](https://developers.digitalocean.com/documentation/v2/#create-a-new-key)
+        3. get the ID of the added public key via [API call](https://api.digitalocean.com/v2/account/keys)
 
-        1. generate the key (for igitalOcean)
-        2. add your public key via <https://cloud.digitalocean.com/ssh_keys> or API <https://developers.digitalocean.com/documentation/v2/#create-a-new-key>
-        3. get the ID of the added public key via API call curl -X GET -H ‘Content-Type: application/json’ -H 'Authorization: Bearer 40e0f142bf2fcdeeaec672a92ca307b0c9de838a4faac51585df26c56eab2541’ <https://api.digitalocean.com/v2/account/keys>
-        4. use this ID for you droplet creation call: …,“ssh_keys”:[123456]… enjoy!
+                curl -X GET -H ‘Content-Type: application/json’ -H 'Authorization: Bearer 40e0f142bf2fcdeeaec672a92ca307b0c9de838a4faac51585df26c56eab2541’
 
-## deploying droplet
+        4. use this ID for you droplet creation call:
+
+                …,“ssh_keys”:[123456]… 
+
+
+## 2. deploying droplet
 
 ### deploying centOS server on the droplet with ssh access restriction
 
-    0. Deploy CentOs7 server on DigitalOcean using terraform. (see: https://www.digitalocean.com/community/tutorials/how-to-use-terraform-with-digitalocean)
-
-    1. scripting CentOS7 initial server setup (see: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7)
-
-    2. jenkins install on CentOS 7 server (see: https://www.digitalocean.com/community/tutorials/how-to-set-up-jenkins-for-continuous-development-integration-on-centos-7)
-
-    3. scripting Jenkins initial setup (see differents web pages on jenkins initial setup)
-
-    4. Install Ansible on CentOS 7 server (see : https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-centos-7)
+0. Deploy CentOs7 server on DigitalOcean using terraform. (see: [using terraform with digitalocean](https://www.digitalocean.com/community/tutorials/how-to-use-terraform-with-digitalocean) )
+1. scripting CentOS7 initial server setup (see: [initial server setup with centOS7](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7) )
+2. jenkins install on CentOS 7 server (see: [setup jenkins on centos 7](https://www.digitalocean.com/community/tutorials/how-to-set-up-jenkins-for-continuous-development-integration-on-centos-7) )
+3. scripting Jenkins initial setup (see differents web pages on jenkins initial setup)
+4. Install Ansible on CentOS 7 server (see : [ansible on centOS7](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-centos-7) )
 
 ### SSL certificate to ensure Vault's HTTP API
 
