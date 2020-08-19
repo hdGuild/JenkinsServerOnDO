@@ -20,7 +20,7 @@ Using Github with ssh key (needed to automate deployments) needs the following :
 2. set the public key as SSH key for your githib account
 3. set the private key (git_id_rsa) as git ssh key on the .git/config file on project folder :
 
-       [remote "origin"]
+        [remote "origin"]
         url = git@github.com:hdGuild/JenkinsServerOnDO.git
         fetch = +refs/heads/*:refs/remotes/origin/*
         identityfile= C:\\Users\\Philippe/.ssh/git_id_rsa
@@ -33,5 +33,8 @@ The project is structured as bellow :
         *Each application should have its own folder*
     * infrastructure folder contains the source for infrastructure deployment
         *contains configuration per environment, scripts for deployment or to deploy, terraform source code*
-* golden folder contains prerequisite deployment before automated deplyment can process
+* golden folder contains prerequisite deployment before automated deplyment can process. following tools will be installed by golden on the Master deploy server :
+    * Jenkins
+    * Ansible
+    * Hashicorp Vault
 * deploy folder contains the pipelines to automate deployments.

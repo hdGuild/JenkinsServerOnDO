@@ -1,20 +1,32 @@
-# Jenkins server install
+# Master server install
 
-this folder is for golden deployment : prerequisites deployment before any automatized deployment.
-prequisites consist on :
+this folder is for master server golden deployment. Means prerequisites deployment before any automatized deployment can be proceed.
 
-## code prepare
+prequisites consists on :
+
+## 1. code prepare
+
+before automated deployment can be done, it is needed to open ssh connection with Git repositories.
+
+The ssh connection is made following these steps :
 
 1. ssh configuration :
     - putty uses .ppk private key that are not supported by openssh.
     - git uses standard openssh private key, not .ppk format.
-    - to see openssh format of putygen ssh key, do load the .ppk with puttygen (see  <https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/>)
-    - needs to add in ~/.ssh/config file, the git ssh IdentityFile as private key to test for ssh connection.
-    - windows openssh does not support ssh agent, so do not use passphrase on windows openssh private keys to use with github !
-    - DigitalOcean does use Key ID rather than Key itself :
-        hi, instead of the actual key you have to send the ID of the key.
+    - to see openssh format of putygen ssh key, do load the .ppk with puttygen (see  [how to add ssh-keys to account](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/) )
+    - add in ~/.ssh/config file, the git ssh IdentityFile as private key to test for ssh connection.
 
-        1. generate the key (which it looks like you’ve already done)
+            [remote "origin"]
+            url = git@github.com:hdGuild/JenkinsServerOnDO.git
+            fetch = +refs/heads/*:refs/remotes/origin/*
+            identityfile= C:\\Users\\Philippe/.ssh/git_id_rsa
+
+    - as windows openssh does not support ssh agent, do not use passphrase on private keys to use with github !
+    - DigitalOcean does use Key ID rather than Key itself :
+
+        *hi, instead of the actual key you have to send the ID of the key.*
+
+        1. generate the key (for igitalOcean)
         2. add your public key via <https://cloud.digitalocean.com/ssh_keys> or API <https://developers.digitalocean.com/documentation/v2/#create-a-new-key>
         3. get the ID of the added public key via API call curl -X GET -H ‘Content-Type: application/json’ -H 'Authorization: Bearer 40e0f142bf2fcdeeaec672a92ca307b0c9de838a4faac51585df26c56eab2541’ <https://api.digitalocean.com/v2/account/keys>
         4. use this ID for you droplet creation call: …,“ssh_keys”:[123456]… enjoy!
