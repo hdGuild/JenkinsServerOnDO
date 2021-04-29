@@ -41,3 +41,15 @@ The project is structured as bellow :
   * Ansible
   * Hashicorp Vault
 * deploy folder contains the pipelines to automate deployments.
+
+## 3: DigitalOcean configuration to use SSH
+
+Deploying over Digital Ocean Cloud using SSH needs the following configuration.
+!SSH DO key will be differents than the github one!
+
+1. SSH key pair RSA2 typed with 4096 bits with passphrase.
+2. set the public key as SSH key for your digitalOcean account.
+3. add the private key do_id_rsa.ppk to your windows pageant (putty agent) giving him your passphrase.
+4. follow the DO guide at <https://www.digitalocean.com/community/tutorials/how-to-set-up-an-ubuntu-20-04-server-on-a-digitalocean-droplet> to deploy ubuntu droplet...
+
+
