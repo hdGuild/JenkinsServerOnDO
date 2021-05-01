@@ -22,10 +22,13 @@ Using Github with ssh key (needed to automate deployments) needs the following :
 2. set the public key as SSH key for your githib account
 3. set the private key (git_id_rsa) as git ssh key on the .git/config file on project folder :
 
+        [core]
+        sshCommand = ssh -i ~/.ssh/git_id_rsa -F /dev/null
         [remote "origin"]
         url = git@github.com:hdGuild/JenkinsServerOnDO.git
         fetch = +refs/heads/*:refs/remotes/origin/*
-        identityfile= C:\\Users\\Philippe/.ssh/git_id_rsa
+
+4. (for windows) - convert the git_id_rsa
 
 ## 2. Repository structure
 
